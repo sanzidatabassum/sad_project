@@ -23,8 +23,9 @@ Simple web-based pharmacy management system built with PHP. Provides CRUD for me
 - medicines/, customers/, suppliers/, sales/, prescriptions/, reports/, users/
 
 ## Demo
-Place a demo image at `assets/demo.png` (or `images/demo.png`) and include it in this README:
-![Project Demo](assets/demo.png)
+Place a demo image at `assets/demo.png` and it will be shown below:
+
+<img src="assets/demo.png" alt="Project Demo" width="600"/>
 
 ## Notes
 - Update credentials and DB configuration before production use.
