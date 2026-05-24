@@ -1,0 +1,13 @@
+
+
+
+
+
+
+
+Credentials:
+
+Email: pranto@gmail.com
+Password: pranto123
+After login → automatically redirects to 
+http://localhost/sadproject/admin/dashboard.html

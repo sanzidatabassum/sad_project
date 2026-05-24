@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - TryUsBD</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TryUsBD</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="wishlist.html"><i class="fas fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="login.html"><i class="fas fa-user"></i></a>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search for products...">
+                <button id="searchButton">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <!-- Search results will appear here -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shop Section -->
+    <div class="shop-container">
+        <!-- Filters Sidebar -->
+        <aside class="shop-filters">
+            <div class="filter-section">
+                <h3>Top Categories</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="headphones">
+                        Headphones
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="earbuds">
+                        Earbuds
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="smartwatch">
+                        Smartwatches
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="category" value="powerbank">
+                        Power Banks
+                    </label>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Price Range</h3>
+                <div class="price-range">
+                    <input type="range" id="priceRange" min="0" max="50000" step="1000">
+                    <div class="price-inputs">
+                        <input type="number" id="minPrice" placeholder="Min">
+                        <span>-</span>
+                        <input type="number" id="maxPrice" placeholder="Max">
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h3>Brands</h3>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="sony">
+                        Sony
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="apple">
+                        Apple
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="samsung">
+                        Samsung
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="anker">
+                        Anker
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="bose">
+                        Bose
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="jbl">
+                        JBL
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="oneplus">
+                        OnePlus
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="huawei">
+                        Huawei
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="xiaomi">
+                        Xiaomi
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" name="brand" value="sennheiser">
+                        Sennheiser
+                    </label>
+                </div>
+            </div>
+
+            <button class="apply-filters">Apply Filters</button>
+        </aside>
+
+        <!-- Products Section -->
+        <main class="shop-products">
+            <div class="shop-header">
+                <h2>All Products (0)</h2>
+                <div class="shop-controls">
+                    <select id="sortProducts">
+                        <option value="default">Default Sorting</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Top Rated</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Products will be loaded dynamically -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Footer content same as other pages -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/shop.js"></script>
+</body>
+</html> 

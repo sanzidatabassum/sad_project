@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="admin-panel">
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h2>TryUsBD Admin</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="dashboard.html"><i class="fas fa-chart-line"></i><span>Dashboard</span></a></li>
+            <li><a href="orders.html"><i class="fas fa-shopping-cart"></i><span>Orders</span></a></li>
+            <li class="active"><a href="products.html"><i class="fas fa-box"></i><span>Products</span></a></li>
+            <li><a href="messages.html"><i class="fas fa-envelope"></i><span>Messages</span></a></li>
+            <li class="logout"><a href="#" onclick="handleLogout()"><i class="fas fa-sign-out-alt"></i><span>Logout</span></a></li>
+        </ul>
+    </nav>
+
+    <main class="content">
+        <header class="content-header">
+            <h1>Products</h1>
+            <button class="action-btn add-btn" onclick="openProductModal()">
+                <i class="fas fa-plus"></i> Add Product
+            </button>
+        </header>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Image</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Rating</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="productsTableBody"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <!-- Add/Edit Modal -->
+    <div id="productModal" class="modal hidden">
+        <div class="modal-box">
+            <div class="modal-header">
+                <h3 id="modalTitle">Add Product</h3>
+                <span onclick="closeProductModal()" class="close-btn">&times;</span>
+            </div>
+            <form id="productForm" onsubmit="saveProduct(event)">
+                <input type="hidden" id="productId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Name *</label>
+                        <input type="text" id="productName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Price (৳) *</label>
+                        <input type="number" id="productPrice" min="0" step="0.01" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category *</label>
+                        <input type="text" id="productCategory" list="categoryList" required>
+                        <datalist id="categoryList"></datalist>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="productStatus">
+                            <option value="available">Available</option>
+                            <option value="upcoming">Upcoming</option>
+                            <option value="out_of_stock">Out of Stock</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Image URL *</label>
+                    <input type="url" id="productImage" required>
+                </div>
+                <div class="form-group">
+                    <label>Description</label>
+                    <textarea id="productDescription" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Rating (0-5)</label>
+                    <input type="number" id="productRating" min="0" max="5" step="0.1" value="0">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="action-btn cancel-btn" onclick="closeProductModal()">Cancel</button>
+                    <button type="submit" class="action-btn add-btn">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/admin.js"></script>
+</body>
+</html>

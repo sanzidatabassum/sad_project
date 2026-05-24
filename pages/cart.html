@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - TryUsBD</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TryUsBD</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="wishlist.html"><i class="fas fa-heart"></i></a>
+            <a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="login.html"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <h2>Shopping Cart</h2>
+        <div class="cart-container">
+            <div class="cart-items">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            
+            <div class="order-form">
+                <h3>Delivery Information</h3>
+                <form id="orderForm" onsubmit="return submitOrder(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Delivery Address *</label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Delivery Location *</label>
+                        <div class="delivery-options">
+                            <label class="radio-label">
+                                <input type="radio" name="delivery" value="inside" checked>
+                                Inside Dhaka (৳60)
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="delivery" value="outside">
+                                Outside Dhaka (৳110)
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div class="summary-item">
+                    <span>Subtotal:</span>
+                    <span>৳<span id="subtotal">0</span></span>
+                </div>
+                <div class="summary-item">
+                    <span>Delivery Charge:</span>
+                    <span>৳<span id="delivery-charge">60</span></span>
+                </div>
+                <div class="summary-item total">
+                    <span>Total:</span>
+                    <span>৳<span id="total">0</span></span>
+                </div>
+                <button type="submit" form="orderForm" class="checkout-btn" id="submitOrderBtn">Place Order</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart.js"></script>
+</body>
+</html> 

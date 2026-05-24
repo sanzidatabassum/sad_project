@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation - TryUsBD</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">
+            <h1>TryUsBD</h1>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-icons">
+            <a href="wishlist.html"><i class="fas fa-heart"></i></a>
+            <a href="cart.html"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            <a href="login.html"><i class="fas fa-user"></i></a>
+        </div>
+    </nav>
+
+    <!-- Order Confirmation Section -->
+    <section class="confirmation-section">
+        <div class="confirmation-container">
+            <div class="confirmation-header">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Placed Successfully!</h2>
+                <p>Order ID: <span id="orderId"></span></p>
+            </div>
+
+            <div class="order-details">
+                <h3>Order Details</h3>
+                <div class="details-grid">
+                    <div class="customer-info">
+                        <h4>Customer Information</h4>
+                        <p>Name: <span id="customerName"></span></p>
+                        <p>Phone: <span id="customerPhone"></span></p>
+                        <p>Email: <span id="customerEmail"></span></p>
+                        <p>Address: <span id="customerAddress"></span></p>
+                        <p>Delivery Location: <span id="deliveryLocation"></span></p>
+                    </div>
+                    
+                    <div class="order-items">
+                        <h4>Ordered Items</h4>
+                        <div id="itemsList"></div>
+                    </div>
+                </div>
+
+                <div class="order-summary">
+                    <h4>Order Summary</h4>
+                    <div class="summary-item">
+                        <span>Subtotal:</span>
+                        <span>৳<span id="subtotal"></span></span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Delivery Charge:</span>
+                        <span>৳<span id="deliveryCharge"></span></span>
+                    </div>
+                    <div class="summary-item total">
+                        <span>Total:</span>
+                        <span>৳<span id="total"></span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="confirmation-actions">
+                <a href="shop.html" class="continue-shopping">Continue Shopping</a>
+                <button onclick="printOrder()" class="print-order"><i class="fas fa-print"></i> Print Order</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+
+    <script src="../js/order-confirmation.js"></script>
+</body>
+</html> 
