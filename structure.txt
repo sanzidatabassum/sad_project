@@ -1,0 +1,38 @@
+C:\xampp\htdocs\pharmacy\
+├── index.php
+├── dashboard.php
+├── logout.php
+├── config/
+│   └── db.php
+├── medicines/
+│   ├── list.php
+│   ├── add.php
+│   ├── edit.php
+│   └── delete.php
+├── customers/
+│   ├── list.php
+│   ├── add.php
+│   ├── edit.php
+│   └── delete.php
+├── suppliers/
+│   ├── list.php
+│   ├── add.php
+│   ├── edit.php
+│   └── delete.php
+├── sales/
+│   ├── create.php
+│   ├── save.php
+│   ├── invoice.php
+│   └── list.php
+├── prescriptions/
+│   ├── list.php
+│   ├── add.php
+│   ├── view.php
+│   └── delete.php
+├── reports/
+│   └── index.php
+└── users/
+    ├── list.php
+    ├── add.php
+    ├── edit.php
+    └── delete.php
